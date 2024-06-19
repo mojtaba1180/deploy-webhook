@@ -1,0 +1,14 @@
+{
+    "name": "webhook-server",
+    "version": "1.0.0",
+    "description": "A simple webhook server to trigger deployment scripts",
+    "main": "webhook_server.js",
+    "scripts": {
+        "start": "node webhook_server.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "crypto": "^1.0.1",
+        "express": "^4.19.2"
+    }
+}
