@@ -1,11 +1,12 @@
 services:
   webhook:
     container_name: deploy_webhook
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "57021:3000"
     volumes:
       - .:/app
       # - /app/node_modules
-    environment:
-      - NODE_ENV=production
+    command: npm run start
