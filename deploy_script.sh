@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Function to update the project
 update_project() {
     local project_path="$1"
     echo "Updating project in $project_path..."
@@ -17,14 +16,11 @@ update_project() {
     echo "Project updated in $project_path."
 }
 
-# Array of project paths
-declare -a paths=(
-    "/home/nfs/salmej/salmej-api/www"
-    "/home/nfs/salmej/salmej-dashboard-ui/www"
-)
+# Space-separated list of project paths
+paths="/home/nfs/salmej/salmej-api/www /home/nfs/salmej/salmej-dashboard-ui/www"
 
 # Loop through each path to check for updates
-for path in "${paths[@]}"; do
+for path in $paths; do
     echo "Checking for updates in $path..."
     cd "$path" || { echo "Failed to change directory to $path"; continue; }
 
