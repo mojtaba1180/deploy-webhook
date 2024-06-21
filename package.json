@@ -4,7 +4,8 @@
     "description": "A simple webhook server to trigger deployment scripts",
     "main": "webhook_server.js",
     "scripts": {
-        "start": "nodemon webhook_server.js",
+        "dev": "nodemon webhook_server.js",
+        "start": "node webhook_server.js",
         "smee": "nodemon smee.js"
     },
     "dependencies": {
